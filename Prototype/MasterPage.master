@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        #wrapper{width: 960px; height: 600px; margin: auto; }
+        #header{ border-bottom:solid; background-color:#E0E0DE;}
+        #main{height: 83%; border-bottom: solid; background-color:#457B9D;}
+        #footer{height: 7%; text-align: center; background-color:#457B9D; padding:15px; font-weight:bold; color:black; font-family:Verdana; font-size:16px;}
+        #nav{width: 100%; position: relative; border-top: solid; font-size: 24px; background-color:#E63946; text-align: center;font-family:Verdana}
+        a{padding-right:25px; padding-left:25px; text-align:center; color: white; text-decoration: none;}
+        a:hover{background-color: indianred; color: lightgray;}
+        #text{font-family:Verdana; font-size:16px;}
+        #button{position: relative; float: right; padding-right: 80px; padding-top:80px; top 35px; width:100px; height:100px;}
+        #search{float:right; position:relative; right:37%; top:80px;}
+        .mpic{padding: 20px; }
+        .leftpic{position: relative; left:47%; padding: 20px;}
+        #content{text-align: left; float: right; width:40%; margin:auto; font-size: 16px; height:75%; padding-right:5%; padding-top:45px; line-height:25px; font-family:Verdana;}
+        .pic{display:block; padding: 0px; width: 50%; height:;}
+        body{background-color: #1D3557;}
+        #coreProd{text-align:center;}
+        #btnSubmit{margin:auto; font-family:Verdana;}
+        #MainImages{padding-top: 140px; auto;}
+        .homepic{padding-left: 24px;}
+        .homepic1{float: right; padding-right: 24px;}
+        #hometext{padding-top: 30px;}
+        
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="wrapper">
+    <div id="header">
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <img class="mpic" src="/Prototype/images/home_logo2.png" alt="Logo" />
+
+            <img class="leftpic" src="/Prototype/images/home_logo.png" alt="Logo" />
+           
+            <div id="nav">
+                &nbsp &nbsp
+                <a href="HomePage.aspx">Home</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="CoreProducts.aspx">Core Products</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="Ordering.aspx">Ordering</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="About.aspx">About Us</a>
+            </div>
+             
+            </asp:ContentPlaceHolder>
+    </div>
+        
+        
+      
+    <div id="main">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+       
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        1591 Hylton Road, Pennsauken, NJ 08110 <br />
+(800) 663-5439 toll-free <br />
+
+        </asp:ContentPlaceHolder>
+    </div>
+</div>
+    </form>
+</body>
+</html>
